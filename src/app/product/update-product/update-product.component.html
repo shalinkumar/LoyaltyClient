@@ -1,0 +1,40 @@
+<div class="modal-header">
+  <h4 class="modal-title">Update Product</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+
+<form [formGroup]="productForm" (ngSubmit)="submitForm()">
+  <div class="modal-body">
+    <div class="container">
+      <div class="form-group mt-4">
+        <label for="titleInput">Name</label>
+        <input class="form-control" id="titleInput" type="text" required placeholder="Name" formControlName="name">
+      </div>
+      <div class="form-group mt-4">
+        <label for="titleInput">Description</label>
+        <input class="form-control" id="titleInput" type="text" required placeholder="Description"
+          formControlName="description">
+      </div>
+      <div class="form-group mt-4">
+        <label for="titleInput">Price</label>
+        <input class="form-control" id="titleInput" type="text" required placeholder="Price" formControlName="price">
+      </div>
+      <div class="form-group mt-4">
+        <label for="titleInput">Category</label>
+        <input class="form-control" id="titleInput" type="text" required placeholder="Category"
+          formControlName="category">
+      </div>
+      <div class="form-group mt-4">
+        <label for="titleInput">Color</label>
+        <input class="form-control" id="titleInput" type="text" required placeholder="Color" formControlName="color">
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+
+    <button class="btn btn-lg btn-dark" type="submit" *ngIf="isSuccessfull">Update</button>
+    <button type="button" class="btn btn-lg btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>
+
+</form>
