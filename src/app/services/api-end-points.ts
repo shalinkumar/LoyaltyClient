@@ -1,8 +1,6 @@
 import { environment } from '../../environments/environment';
 import { Injectable } from '@angular/core';
 
-const localDevelopementUrl = 'https://localhost:7139';
-
 const locaEndpoints = {
   GetAllProducts: 'products',
   CreateProduct: 'create-product',
@@ -14,28 +12,29 @@ const locaEndpoints = {
   DeleteCategory: 'delete-category'
 };
 
-
-
-const ProdEndpoints = {}
-
-
-
 @Injectable({
   providedIn: 'root'
 })
 export class Endpoints {
+  DevEndpoints: any;
+  apiUrl: any;
 
-  readonly DevEndpoints = {
-    GetAllProducts: `${localDevelopementUrl}/${locaEndpoints.GetAllProducts}`,
-    CreateProduct: `${localDevelopementUrl}/${locaEndpoints.CreateProduct}`,
-    UpdateProduct: `${localDevelopementUrl}/${locaEndpoints.UpdateProduct}`,
-    DeleteProduct: `${localDevelopementUrl}/${locaEndpoints.DeleteProduct}`,
+  constructor() {   
+    
+    this.apiUrl = 'https://shalinloyaltyapi.azurewebsites.net';
 
-    GetAllCategory: `${localDevelopementUrl}/${locaEndpoints.GetAllCategory}`,
-    CreateCategory: `${localDevelopementUrl}/${locaEndpoints.CreateCategory}`,
-    UpdateCategory: `${localDevelopementUrl}/${locaEndpoints.UpdateCategory}`,
-    DeleteCategory: `${localDevelopementUrl}/${locaEndpoints.DeleteCategory}`
-  };
+    this.DevEndpoints = {
+      GetAllProducts: `${this.apiUrl}/${locaEndpoints.GetAllProducts}`,
+      CreateProduct: `${this.apiUrl}/${locaEndpoints.CreateProduct}`,
+      UpdateProduct: `${this.apiUrl}/${locaEndpoints.UpdateProduct}`,
+      DeleteProduct: `${this.apiUrl}/${locaEndpoints.DeleteProduct}`,
+
+      GetAllCategory: `${this.apiUrl}/${locaEndpoints.GetAllCategory}`,
+      CreateCategory: `${this.apiUrl}/${locaEndpoints.CreateCategory}`,
+      UpdateCategory: `${this.apiUrl}/${locaEndpoints.UpdateCategory}`,
+      DeleteCategory: `${this.apiUrl}/${locaEndpoints.DeleteCategory}`
+    };
+  }
 
   //readonly endpoints = environment.production ? ProdEndpoints : DevEndpoints;
 }

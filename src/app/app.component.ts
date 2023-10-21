@@ -45,7 +45,7 @@ export class AppComponent {
         next: (response) => {
           this.service.allProducts = response;
         },
-        error: () => {
+        error: () => {        
           this.toastrService.error("Error Occured");
         },
       });
