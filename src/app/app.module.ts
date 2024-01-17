@@ -10,6 +10,7 @@ import { CreateCategoryComponent } from './category/create-category/create-categ
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DebounceClickDirective } from './directive/debounce-click.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CreateProductComponent,
     UpdateProductComponent,
     UpdateCategoryComponent,
-    CreateCategoryComponent
+    CreateCategoryComponent,
+    DebounceClickDirective
   ],
   imports: [
     BrowserModule,

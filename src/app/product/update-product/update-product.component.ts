@@ -43,7 +43,7 @@ export class UpdateProductComponent {
 
     updateProduct.Id = this.productToUpdate.id;
     updateProduct.Name = this.productForm.get('name')!.value;
-    updateProduct.UserDescription = this.productForm.get('description')!.value;
+    updateProduct.Description = this.productForm.get('description')!.value;
     updateProduct.Price = this.productForm.get('price')!.value;
     updateProduct.Category = this.productForm.get('category')!.value;
     updateProduct.Color = this.productForm.get('color')!.value;

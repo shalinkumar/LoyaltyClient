@@ -33,9 +33,9 @@ export class CreateProductComponent {
 
   submitForm() {
     var createProduct = {} as ProductCreateUpdateDto;
-
+    debugger;
     createProduct.Name = this.productForm.get('name')!.value;
-    createProduct.UserDescription = this.productForm.get('description')!.value;
+    createProduct.Description = this.productForm.get('description')!.value;
     createProduct.Price = this.productForm.get('price')!.value;
     createProduct.Category = this.productForm.get('category')!.value;
     createProduct.Color = this.productForm.get('color')!.value;

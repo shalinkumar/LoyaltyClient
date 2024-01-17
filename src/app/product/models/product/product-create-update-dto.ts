@@ -1,5 +1,4 @@
 export interface ProductCreateUpdateDto {
-  UserDescription: any;
   Id: string;
   Name: string;
   Category: string;

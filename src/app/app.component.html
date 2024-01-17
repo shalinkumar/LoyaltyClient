@@ -1,14 +1,15 @@
 <div class="container d-flex flex-column min-vh-100 justify-content-center align-items-center">
-  <h1>Loyalty It Interview Project</h1>
+  <h1 i18n="loyaltyHeader">Loyalty It Interview Project</h1>
 
   <div class="row">
     <div class="d-flex justify-content-between">
-      <button class="btn btn-lg btn-dark mt-3" (click)="createProduct()">
-        Create Product
+      <button class="btn btn-lg btn-dark mt-3" 
+      appDebounceClick (debounceClick)="createProduct()" [debounceTime]="700" (click)="createProduct()">
+        <label i18n>Create Product</label>
       </button>
 
       <button class="btn btn-lg btn-dark mt-3" (click)="createCategory()">
-        Create Category
+        <label i18n>Create Category</label>         
       </button>
     </div>
   </div>

@@ -2,14 +2,14 @@ import { environment } from '../../environments/environment';
 import { Injectable } from '@angular/core';
 
 const locaEndpoints = {
-  GetAllProducts: 'products',
-  CreateProduct: 'create-product',
-  UpdateProduct: 'update-product',
-  DeleteProduct: 'delete-product',
+  GetAllProducts: 'product',
+  CreateProduct: 'product',
+  UpdateProduct: 'product',
+  DeleteProduct: 'product',
   GetAllCategory: 'category',
-  CreateCategory: 'create-category',
-  UpdateCategory: 'update-category',
-  DeleteCategory: 'delete-category'
+  CreateCategory: 'category',
+  UpdateCategory: 'category',
+  DeleteCategory: 'category'
 };
 
 @Injectable({
@@ -21,7 +21,7 @@ export class Endpoints {
 
   constructor() {   
     
-    this.apiUrl = 'https://shalinloyaltyapi.azurewebsites.net';
+    this.apiUrl = 'https://localhost:7139';
 
     this.DevEndpoints = {
       GetAllProducts: `${this.apiUrl}/${locaEndpoints.GetAllProducts}`,

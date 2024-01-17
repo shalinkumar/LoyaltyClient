@@ -9,6 +9,15 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr": {
+            "translation": "src/locale/messages.fr.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -46,6 +55,11 @@
               ],
               "outputHashing": "all"
             },
+            "fr": {
+              "localize": ["fr"],
+              "outputPath": "dist/under-construction-fr/",
+              "i18nMissingTranslation": "error"
+            },
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -65,6 +79,9 @@
             },
             "development": {
               "browserTarget": "LoyaltyClient:build:development"
+            },
+            "fr": {
+              "browserTarget": "LoyaltyClient:build:fr"
             }
           },
           "defaultConfiguration": "development"

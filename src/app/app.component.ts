@@ -99,12 +99,13 @@ export class AppComponent {
   }
 
   createProduct() {
+    //console.log("1");
     const modalRef = this.modalService.open(CreateProductComponent, this.modalOptions);
-    modalRef.result.then((data) => {
+     modalRef.result.then((data) => {
       // on close      
-    }, (reason) => {
-      // on dismiss      
-      this.getProduct();
+     }, (reason) => {
+     // on dismiss      
+       this.getProduct();
     });
   }
 
